@@ -2,11 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/ofont.ru_Bebas\ Neue.ttf') format('truetype');
+}
+.bebas-neue-regular {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+
 @media (max-width: 1100px) {
-    .header__links{
+    .header__links {
         font-size: 16px !important;
     }
-    .header__button{
+
+    .header__button {
         font-size: 18px !important;
         padding: 7px 20px !important;
     }
