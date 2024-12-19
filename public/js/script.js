@@ -3,6 +3,7 @@ const navMenu = document.getElementById('header_nav-menu');
 const overlay = document.getElementById('overlay_nav');
 const body = document.body;
 
+// Handle menu open/close
 hamburgerBtn.addEventListener('click', () => {
   hamburgerBtn.classList.toggle('open');
   navMenu.classList.toggle('max-h-0');
@@ -29,6 +30,18 @@ hamburgerBtn.addEventListener('click', () => {
 
 // Close menu when overlay is clicked
 overlay.addEventListener('click', () => {
+  closeNavMenu();
+});
+
+// Close menu when a section link is clicked
+const navLinks = document.querySelectorAll('#header_nav-menu a');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    closeNavMenu();
+  });
+});
+
+function closeNavMenu() {
   hamburgerBtn.classList.remove('open');
   navMenu.classList.remove('max-h-[400px]');
   navMenu.classList.add('max-h-0');
@@ -40,4 +53,4 @@ overlay.addEventListener('click', () => {
   hamburgerBtn.children[1].style.opacity = '1';
   hamburgerBtn.children[2].style.transform = 'rotate(0)';
   hamburgerBtn.children[2].style.top = '1.5rem';
-});
+}
