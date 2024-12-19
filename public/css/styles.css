@@ -756,6 +756,9 @@ video {
 .max-w-\[460px\] {
   max-width: 460px;
 }
+.max-w-\[450px\] {
+  max-width: 450px;
+}
 .rotate-180 {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
